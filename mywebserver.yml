@@ -8,8 +8,21 @@
       state: present
     when: ansible_os_family=="Debian"
 
+  - name: start webserver on ubuntu ans nodes
+    service:
+      name: apache2
+      state: started
+    when: ansible_os_family=="Debian"
+
+
   - name: install websever on RedHat ansible nodes
     yum:
        name: httpd
        state: present 
+    when: ansible_os_family=="RedHat"
+  
+  - name: start webserver on RedHat ansible nodes
+    service:
+       name: httpd
+       state: started
     when: ansible_os_family=="RedHat"
