@@ -4,7 +4,12 @@
 - include_tasks: myjavainstall.yml
 - include_tasks: usergroup.yml
 - include_tasks: downloadtomcat.yml
-
-
+- include_tasks: Permissions.yml
+- include_tasks: tomcatservice.yml
+- include_tasks: tomstart.yml
+- include_tasks: webmanagement.yml
+- include_tasks: mytomrestart.yml
+- include_tasks: deployjavaapp.yml
+- include_tasks: mytomrestart.yml
 
 
