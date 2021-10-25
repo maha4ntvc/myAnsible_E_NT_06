@@ -1,10 +1,5 @@
 ---
-- name: deploy jenkins as application
-  get_url:
-    url: https://get.jenkins.io/war-stable/2.303.2/jenkins.war
-    dest: /opt/tomcat/webapps/jenkins.war
-    force_basic_auth: yes
-  
+ 
 - name: deploy java application
   get_url:
     url: https://myk8s0011.s3.us-west-2.amazonaws.com/mahaLogin.war
